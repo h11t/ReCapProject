@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iPfuFFFLyt+v5rfcl4z8lK3MnmsdAasDRtJyorcUgCvnIhwMkOOT0hUfs5MKdMoMJKmBkHDtx0w2ptA7n1PKHw==",
+  "dgSpecHash": "7UFz1duKpRxb0tR6fgLqRC3RwFL0lcdRfxAjJuk/l1iirhGRxbPSR+SsZu3fnn1LCwr+aRxNrWPyOsP/57hj5A==",
   "success": true,
-  "projectFilePath": "D:\\ReCapProject\\ReCapProject\\Console\\Console.csproj",
+  "projectFilePath": "D:\\ReCapProject\\ReCapProject\\Console\\ConsoleUI.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
