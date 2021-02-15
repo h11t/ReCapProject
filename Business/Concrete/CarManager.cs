@@ -16,7 +16,7 @@ namespace Business.Concrete
         }
 
         public void Add(Car car)
-        {
+        { 
             _carDal.Add(car);
         }
 
@@ -30,10 +30,20 @@ namespace Business.Concrete
             return _carDal.GetAll();
         }
 
-        public Car GetById(int id)
+        public List<Car> GetCarsByBrandId(int id)
         {
-            return _carDal.GetById(id);
+            return _carDal.GetAll(c => c.BrandId == id);
         }
+
+        public List<Car> GetCarsByColorId(int id)
+        {
+            return _carDal.GetAll(c => c.ColorId == id);
+        }
+
+        //public Car GetById(int id)
+        //{
+        //    return _carDal.GetById(id);
+        //}
 
         public void Update(Car car)
         {
