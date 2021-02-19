@@ -45,11 +45,13 @@ D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\runtimes\unix\lib\n
 D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\Business.dll
+D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\Core.dll
 D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\DataAccess.dll
 D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\Entities.dll
 D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\Business.pdb
 D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\DataAccess.pdb
 D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\ReCapProject\ReCapProject\Console\bin\Debug\netcoreapp3.1\Core.pdb
 D:\ReCapProject\ReCapProject\Console\obj\Debug\netcoreapp3.1\ConsoleUI.csprojAssemblyReference.cache
 D:\ReCapProject\ReCapProject\Console\obj\Debug\netcoreapp3.1\ConsoleUI.AssemblyInfoInputs.cache
 D:\ReCapProject\ReCapProject\Console\obj\Debug\netcoreapp3.1\ConsoleUI.AssemblyInfo.cs

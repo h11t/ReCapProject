@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,11 @@ namespace DataAccess.Concrete.InMemoryCarDal
         public void Add(Car car)
         {
             _cars.Add(car);
+        }
+
+        public bool CheckToAdd(Car entity)
+        {
+            throw new NotImplementedException();
         }
 
         public void Delete(Car car)
@@ -55,6 +61,11 @@ namespace DataAccess.Concrete.InMemoryCarDal
         }
 
         public Car GetById(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<CarDetailDto> GetCarDetails()
         {
             throw new NotImplementedException();
         }
