@@ -17,13 +17,13 @@ namespace ConsoleUI
 
             //BrandTest();
 
-            //CarDetailsTest();
+            CarDetailsTest();
         }
 
         private static void CarDetailsTest()
         {
             CarManager carManager = new CarManager(new EFCarDal());
-            foreach (var item in carManager.GetCarDetails())
+            foreach (var item in carManager.GetCarDetails().Data)
             {
                 Console.WriteLine("CarName :" + item.CarName + "  BrandName:" + item.BrandName + "  ColorName:" + item.ColorName + "  DailyPrice:" + item.DailyPrice);
             }
@@ -36,20 +36,20 @@ namespace ConsoleUI
             brandManager.Add(new Brand() { Id = 2, Name = "bmw" });
             brandManager.Add(new Brand() { Id = 3, Name = "audi" });
 
-            foreach (var item in brandManager.GetAll())
+            foreach (var item in brandManager.GetAll().Data)
             {
                 Console.WriteLine("Id:" + item.Id + "  Name:" + item.Name);
             }
 
             brandManager.Delete(new Brand() { Id = 2, Name = "bmw" });
-            foreach (var item in brandManager.GetAll())
+            foreach (var item in brandManager.GetAll().Data)
             {
                 Console.WriteLine("Id:" + item.Id + "  Name:" + item.Name);
             }
 
             brandManager.Update(new Brand() { Id = 3, Name = "toyota" });
             Console.WriteLine("3 nolu marka değiştirilmiştir");
-            Console.WriteLine("Id:" + brandManager.GetById(3).Id + "  Name:" + brandManager.GetById(3).Name);
+            Console.WriteLine("Id:" + brandManager.GetById(3).Data.Id + "  Name:" + brandManager.GetById(3).Data.Name);
         }
 
         private static void ColorTest()
@@ -59,20 +59,20 @@ namespace ConsoleUI
             colorManager.Add(new Color() { Id = 2, Name = "mavi" });
             colorManager.Add(new Color() { Id = 3, Name = "siyah" });
 
-            foreach (var item in colorManager.GetAll())
+            foreach (var item in colorManager.GetAll().Data)
             {
                 Console.WriteLine("Id:" + item.Id + "  Name:" + item.Name);
             }
 
             colorManager.Delete(new Color() { Id = 2, Name = "mavi" });
-            foreach (var item in colorManager.GetAll())
+            foreach (var item in colorManager.GetAll().Data)
             {
                 Console.WriteLine("Id:" + item.Id + "  Name:" + item.Name);
             }
 
             colorManager.Update(new Color() { Id = 3, Name = "mavi" });
             Console.WriteLine("3 nolu color değiştirilmiştir");
-            Console.WriteLine("Id:" + colorManager.GetById(3).Id + "  Name:" + colorManager.GetById(3).Name);
+            Console.WriteLine("Id:" + colorManager.GetById(3).Data.Id + "  Name:" + colorManager.GetById(3).Data.Name);
         }
 
         private static void CarTest()
@@ -81,13 +81,13 @@ namespace ConsoleUI
             carManager.Add(new Car() { Id = 16, BrandId = 4, ColorId = 4, DailyPrice = 90, ModelYear = new DateTime(1997, 01, 01), Description = "ÇOCUK" });
             Listele(carManager);
             Console.WriteLine("5 nolu markanın arabaları aşağıdadır");
-            foreach (var item in carManager.GetCarsByBrandId(5))
+            foreach (var item in carManager.GetCarsByBrandId(5).Data)
             {
                 Console.WriteLine("Id:" + item.Id + "   BrandId:" + item.BrandId + "   ColorId:" + item.ColorId + "   DailyPrice:" + item.DailyPrice + "  Description:" + item.Description + "  ModelYear:" + item.ModelYear);
             }
                     ;
             Console.WriteLine("2 nolu rengin arabaları aşağıdadır");
-            foreach (var item in carManager.GetCarsByColorId(2))
+            foreach (var item in carManager.GetCarsByColorId(2).Data)
             {
                 Console.WriteLine("Id:" + item.Id + "   BrandId:" + item.BrandId + "   ColorId:" + item.ColorId + "   DailyPrice:" + item.DailyPrice + "  Description:" + item.Description + "  ModelYear:" + item.ModelYear);
             }
@@ -96,7 +96,7 @@ namespace ConsoleUI
         private static void Listele(CarManager carManager)
         {
             Console.WriteLine("---LIST OF ALL CARS IN MEMORY---");
-            foreach (var item in carManager.GetAll())
+            foreach (var item in carManager.GetAll().Data)
             {
                 Console.WriteLine("Id:" + item.Id + "   BrandId:" + item.BrandId + "   ColorId:" + item.ColorId + "   DailyPrice:" + item.DailyPrice + "  Description:" + item.Description + "  ModelYear:" + item.ModelYear);
             }
