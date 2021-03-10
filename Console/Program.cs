@@ -17,7 +17,29 @@ namespace ConsoleUI
 
             //BrandTest();
 
-            CarDetailsTest();
+            //CarDetailsTest();
+
+            UserManager userManager = new UserManager(new EFUserDal());
+            userManager.Add(new User() {   FirstName="Hayri", LastName="Bacaksız", Email="hayri.bacaksiz@hb.com", Password="123"  });
+            userManager.Add(new User() { FirstName = "Bahri", LastName = "Kolsuz", Email = "bahri.kolsuz@bk.com", Password = "456" });
+            userManager.Add(new User() { FirstName = "Zeki", LastName = "Kafasız", Email = "zeki.kafasiz@zk.com", Password = "789" });
+
+            Console.WriteLine("Bütün kullanıcılar .......");
+            foreach (var item in userManager.GetAll().Data)
+            {
+                Console.WriteLine("Id:"+item.Id+"  FirstName:"+item.FirstName+ "  LastName:"+item.LastName);
+            }
+
+            CustomerManager customerManager = new CustomerManager(new EFCustomerDal());
+            customerManager.Add(new Customer() { UserId=2, CompanyName="KOLSUZLAR A.Ş" });
+            customerManager.Add(new Customer() { UserId = 3, CompanyName = "HEADLESS A.Ş" });
+            Console.WriteLine("Bütün Müşteriler .......");
+            foreach (var item in customerManager.GetAll().Data)
+            {
+                Console.WriteLine("Id:" + item.UserId + "  CompanyName:" + item.CompanyName);
+            }
+
+
         }
 
         private static void CarDetailsTest()
